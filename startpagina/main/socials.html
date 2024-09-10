@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/socialstyle.css">
+    <title>Social Media</title>
+</head>
+
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="header">
+                <a href="index.html">Home</a>
+                <h1>Socials</h1>
+                <img src="../main/img/Curio-logo-3.webp" alt="Logo" class="header-logo">
+            </div>
+        </div>
+    </header>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="../main/img/85590-590014592.mp4" type="video/mp4">
+            Je browser ondersteunt deze video niet.
+        </video>
+    </div>
+    
+    <main>
+        <div class="container">
+            <div class="content">
+                <div class="block">
+                    <h2>Onze Social Media Kanalen</h2>
+                    <p>Volg ons op onze sociale media om op de hoogte te blijven van het laatste nieuws en updates:</p>
+                </div>
+
+                <!-- Facebook Sectie -->
+                <div class="block">
+                    <button class="button toggle-button" onclick="toggleContent('facebook')">Facebook</button>
+                </div>
+                <div id="facebook" class="hidden-content">
+                    <p>Volg ons op Facebook voor dagelijkse updates en interactie met onze community.</p>
+                    <a href="https://www.facebook.com/curioonderwijs/" target="_blank" class="button">Bezoek onze Facebook-pagina</a>
+                </div>
+
+                <!-- Twitter Sectie -->
+                <div class="block">
+                    <button class="button toggle-button" onclick="toggleContent('twitter')">Twitter</button>
+                </div>
+                <div id="twitter" class="hidden-content">
+                    <p>Blijf op de hoogte van het laatste nieuws en meldingen via Twitter.</p>
+                    <a href="https://x.com/i/flow/login?redirect_after_login=%2Fcurioonderwijs" target="_blank" class="button">Volg ons op Twitter</a>
+                </div>
+
+                <!-- Instagram Sectie -->
+                <div class="block">
+                    <button class="button toggle-button" onclick="toggleContent('instagram')">Instagram</button>
+                </div>
+                <div id="instagram" class="hidden-content">
+                    <p>Bekijk onze nieuwste foto's en video's op Instagram.</p>
+                    <a href="https://www.instagram.com/curioonderwijsgroep/" target="_blank" class="button">Volg ons op Instagram</a>
+                </div>
+
+                <!-- LinkedIn Sectie -->
+                <div class="block">
+                    <button class="button toggle-button" onclick="toggleContent('linkedin')">LinkedIn</button>
+                </div>
+                <div id="linkedin" class="hidden-content">
+                    <p>Verbonden blijven met ons op LinkedIn voor professionele updates en netwerkopties.</p>
+                    <a href="https://www.linkedin.com/company/curioonderwijs/" target="_blank" class="button">Bezoek onze LinkedIn-pagina</a>
+                </div>
+
+                <!-- YouTube Sectie -->
+                <div class="block">
+                    <button class="button toggle-button" onclick="toggleContent('youtube')">YouTube</button>
+                </div>
+                <div id="youtube" class="hidden-content">
+                    <p>Bekijk onze nieuwste video's en tutorials op ons YouTube-kanaal.</p>
+                    <a href="https://www.youtube.com/channel/curioonderwijsgroep" target="_blank" class="button">Bekijk ons YouTube-kanaal</a>
+                </div>
+
+                <!-- WhatsApp Sectie -->
+                <div class="block">
+                    <button class="button toggle-button" onclick="toggleContent('whatsapp')">WhatsApp</button>
+                </div>
+                <div id="whatsapp" class="hidden-content">
+                    <p>Neem direct contact met ons op via WhatsApp voor snelle vragen en support.</p>
+                    <a href="https://api.whatsapp.com/send?phone=31622089133" target="_blank" class="button">Stuur ons een WhatsApp-bericht</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-block">
+                <h3>Socials</h3>
+                <a href="contact&hulp.html" class="footer-link">Contact & Hulp</a>
+                <p><a href="meningstudent.html" class="footer-link">Mening Studenten</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="socials.js"></script>
+</body>
+
+</html>

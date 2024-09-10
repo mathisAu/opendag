@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opendag Curio</title>
+    <link rel="stylesheet" href="../css/style.css">
+   
+    
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="../main/img/85590-590014592.mp4" type="video/mp4">
+            Je browser ondersteunt deze video niet.
+        </video>
+    </div>
+    
+        <div class="container">
+            <div class="header">
+                <img src="img/Curio-logo-3.webp" alt="Curio Logo" class="header-logo">
+                <h1>Opendag Software Developer</h1>
+                <h2>Mathis Augustin <br> 23a</h2>
+            </div>
+
+            <div class="sidebar-left">
+                <div class="block toggle-button" onclick="toggleContent('vakken-eerstejaars')">Vakken Eerstejaars</div>
+                <div id="vakken-eerstejaars" class="hidden-content">
+                    <ul>
+                        <li>Taal - Nederlands</li>
+                        <li>Taal - Engels</li>
+                        <li>Praktijk - PRA</li>
+                        <li>Programmeren - PRO</li>
+                        <li>Webontwikkeling - WEB</li>
+                        <li>Native - NAV</li>
+                        <li>Gesprekken - Mentoruur</li>
+                        <li>Project uur - Codelab</li>
+                    </ul>
+                    <!-- Voeg hier de nieuwe button toe -->
+                    <button id="extra-button" class="hidden" onclick="extraButtonAction()">informatie vakken</button>
+                    <div id="vak-informatie" class="hidden vak-info">
+                        <h3>Vakinformatie</h3>
+                        <p><strong>Nederlands:</strong> Verbeter je taalvaardigheden in het Nederlands.</p>
+                        <p><strong>Engels:</strong> Leer hoe je effectief in het Engels communiceert.</p>
+                        <p><strong>PRA:</strong> Praktische opdrachten om technische vaardigheden te ontwikkelen.</p>
+                        <p><strong>PRO:</strong> Grondige inleiding in programmeren.</p>
+                        <p><strong>WEB:</strong> Leer de basis van webontwikkeling met HTML, CSS, en JavaScript.</p>
+                        <p><strong>NAV:</strong> Ontwikkel native apps voor mobiele apparaten.</p>
+                        <p><strong>Mentoruur:</strong> Begeleidende gesprekken en voortgangsbeoordeling met een mentor.</p>
+                        <p><strong>Codelab:</strong> Werk aan projecten in een gestructureerde omgeving.</p>
+                    </div>
+            
+                </div>
+
+                <div class="block">
+                    <a href="meningstudent.html">Mening Studenten</a>
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="block" onclick="toggleContent('indeling-blokken')">Indeling Blokken</div>
+                <div id="indeling-blokken" class="hidden-content">
+                    <div class="block-detail">
+                        <img src="../main/img/blok.png" alt="Rooster" class="head-logo">
+                    </div>
+                </div>
+
+                <div class="block" onclick="toggleContent('smoelenboek-docent')">Smoelenboek Docenten</div>
+                <div id="smoelenboek-docent" class="hidden-content">
+                    <div class="docenten-grid">
+                        <div class="docent">
+                            <img src="img/joep.png" alt="Docent 1">
+                            <p>joep</p>
+                        </div>
+                        <div class="docent">
+                            <img src="img/ine.png" alt="Docent 2">
+                            <p>ine</p>
+                        </div>
+                        <div class="docent">
+                            <img src="img/tim.png" alt="Docent 3">
+                            <p>tim</p>
+                        </div>
+                        <div class="docent">
+                            <img src="img/steven.png" alt="Docent 4">
+                            <p>steven</p>
+                        </div>
+                        <div class="docent">
+                            <img src="img/bart.png" alt="Docent 5">
+                            <p>bart</p>
+                        </div>
+                        <div class="docent">
+                            <img src="img/michel.png" alt="Docent 6">
+                            <p>michel</p>
+                        </div>
+                        <div class="docent">
+                            <img src="img/marc.png" alt="Docent 6">
+                            <p>marc</p>
+                        </div>
+                        <div class="docent">
+                            <img src="img/elton.png" alt="Docent 6">
+                            <p>elton</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="block" onclick="toggleContent('vakanties')">Vakanties</div>
+                <div id="vakanties" class="hidden-content">
+                    <div class="block-detail">
+                        <p><strong>Herfstvakantie 2024:</strong> Van zaterdag 19 oktober 2024 tot zondag 27 oktober 2024</p>
+                    </div>
+                    <div class="block-detail">
+                        <p><strong>Kerstvakantie 2024:</strong> Van zaterdag 21 december 2024 tot zondag 5 januari 2025</p>
+                    </div>
+                    <div class="block-detail">
+                        <p><strong>Voorjaarsvakantie 2025:</strong> Van zaterdag 15 februari 2025 tot zondag 23 februari 2025</p>
+                    </div>
+                    <div class="block-detail">
+                        <p><strong>Meivakantie 2025:</strong> Van zaterdag 26 april 2025 tot zondag 4 mei 2025</p>
+                    </div>
+                    <div class="block-detail">
+                        <p><strong>Zomervakantie 2025:</strong> Van zaterdag 19 juli 2025 tot zondag 31 augustus 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-right">
+                <div class="block" onclick="toggleContent('rooster-eerstejaars')">Rooster</div>
+                <div id="rooster-eerstejaars" class="hidden-content">
+                    <img src="../main/img/Rooster eerste leerjaar.png" alt="Rooster" class="head-logo">
+                </div>
+
+                <div class="block" onclick="toggleContent('jaar-versnellen')">Het Jaar Versnellen?</div>
+                <div id="jaar-versnellen" class="hidden-content">
+                    <img src="../main/img/Schermafbeelding 2024-09-03 093918.png" alt="Rooster" class="head-logo">
+                </div>
+            </div>
+        </div>
+    
+</div>
+
+        <div class="footer">
+            <div class="block">
+                <a href="contact&hulp.html">Contact & Hulp</a>
+            </div>
+            <div class="block">
+                <a href="socials.html">Socials</a>
+            </div>
+        </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

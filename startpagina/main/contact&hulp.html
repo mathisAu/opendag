@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contactstyle.css">
+    <title>Contact & Hulp</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <a href="index.html">Home</a>
+                <h1>Contact & Hulp</h1>
+                <img src="../main/img/Curio-logo-3.webp" alt="Logo" class="header-logo">
+            </div>
+        </div>
+    </header>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="../main/img/85590-590014592.mp4" type="video/mp4">
+            Je browser ondersteunt deze video niet.
+        </video>
+    </div>
+    <main>
+        <div class="container">
+            <div class="content">
+                <!-- Contactinformatie Knop -->
+                <div class="block">
+                    <button class="button toggle-button" onclick="toggleContent('contact-info')">Contactinformatie</button>
+                </div>
+
+                <!-- Contactinformatie Inhoud -->
+                <div id="contact-info" class="hidden-content">
+                    <h2>Contactinformatie</h2>
+                    <p>Neem contact met ons op via de onderstaande gegevens:</p>
+                    <p>Email: <a href="mailto:curio@edu.crui.nl">curio@edu.curio.nl</a></p>
+                    <p>Telefoon: <a href="tel:+31234567890">+31 234 567 890</a></p>
+                </div>
+
+                <!-- Veelgestelde Vragen Knop -->
+                <div class="block">
+                    <button class="button toggle-button" onclick="toggleContent('faq')">Veelgestelde Vragen</button>
+                </div>
+
+                <!-- Veelgestelde Vragen Inhoud -->
+                <div id="faq" class="hidden-content">
+                    <h4>Hoe kan ik mijn account herstellen?</h4>
+                    <p>U kunt uw account herstellen door op de wachtwoordherstelpagina te klikken en uw e-mailadres in te vullen. Volg de instructies die u via email ontvangt.</p>
+
+                    <h4>Hoe kan ik mijn abonnement opzeggen?</h4>
+                    <p>Om uw abonnement op te zeggen, gaat u naar de abonnementsinstellingen in uw account en selecteert u 'Opzeggen'. U ontvangt een bevestiging per email.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+           
+            <div class="footer-block">
+                <h3>Contact & Hulp</h3>
+                <div class="footer-block">
+                    <a href="meningstudent.html" class="footer-link">Mening Studenten</a>
+                    <p><a href="socials.html" class="footer-link">Socials</a></p>
+                </div>
+              
+        </div>
+    </footer>
+
+    <script src="contact.js"></script>
+</body>
+</html>

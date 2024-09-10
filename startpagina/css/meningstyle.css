@@ -1,0 +1,256 @@
+/* Zorg ervoor dat body en html geen extra ruimte hebben */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+   
+    min-height: 300vh;
+}
+
+/* De video achtergrond instellen */
+.video-background {
+    position: fixed; /* Gebruik fixed zodat de video altijd op de achtergrond blijft */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Zet de video achter de overige content */
+}
+
+/* Zorg ervoor dat de video de volledige achtergrond bedekt */
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorg ervoor dat de video het gehele scherm bedekt */
+}
+
+/* Zorg ervoor dat de container boven de video wordt weergegeven */
+.container {
+    position: relative;
+    z-index: 1; /* Zet de container voor de video */
+    padding: 70px; /* Optioneel: voeg padding toe indien nodig */
+}
+
+
+h1{
+    color: #ffffff;
+}
+.button {
+    background-color: #70c6ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+/* Knop hover en active stijlen */
+.button:hover {
+    background-color: #56a9e6;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background-color: #3d8abd;
+    transform: scale(0.95);
+}
+/* Algemene stijlen voor de header */
+.page-header {
+    background-color: #70c6ff; /* Aangepast naar kleur uit de eerste CSS */
+    color: white; /* Witte tekstkleur */
+    padding: 10px 0; /* Padding boven en onder */
+    position: fixed; /* Vaste positie bovenaan de pagina */
+    width: 100%; /* Breedte 100% van de viewport */
+    top: 0; /* Plak de header aan de bovenkant */
+    left: 0; /* Zorg ervoor dat de header helemaal aan de linkerkant zit */
+    z-index: 1000; /* Zorg ervoor dat de header boven andere inhoud zit */
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Container binnen de header voor centreren */
+.header {
+    max-width: 1200px; /* Maximale breedte van de container */
+    margin: 0 auto;
+    background-color: #70c6ff; /* Centreren van de container */
+    display: flex; /* Flexbox voor uitlijning */
+    align-items: center;
+    justify-content: space-between; /* Horizontaal centreren */
+}
+
+/* Stijl voor de afbeelding in de header */
+.header-logo {
+    max-height: 50px; /* Pas de hoogte aan naar wens */
+    max-width: 100px; /* Zorg ervoor dat het plaatje niet te groot wordt */
+}
+h2{
+    background-color:  rgb(232, 232, 232);
+}
+
+/* Stijlen voor de home-button */
+.home-button {
+    background-color: #70c6ff; /* Aangepast naar kleur uit de eerste CSS */
+    color: white; /* Witte tekstkleur voor de knop */
+    text-decoration: none; /* Verwijder de onderstreping van de link */
+    padding: 10px 20px; /* Padding rondom de tekst */
+    border-radius: 8px; /* Afronding van de hoeken */
+    font-size: 1.2rem; /* Grotere lettergrootte */
+    font-weight: bold; /* Vetgedrukte tekst */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor een 3D-effect */
+    transition: all 0.3s ease; /* Vloeiende overgangen voor hover-effecten */
+    margin-bottom: 10px; /* Ruimte onder de home-button */
+}
+
+/* Hover effect voor de home-button */
+.home-button:hover {
+    background-color: #56a9e6; /* Aangepast naar kleur uit de eerste CSS */
+    color: white; /* Witte tekstkleur bij hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Versterkte schaduw bij hover */
+    transform: scale(1.05); /* Klein beetje vergroten bij hover */
+}
+
+/* Stijlen voor de student-opinions link */
+.student-opinions {
+    color: #ffffff; /* Witte tekstkleur voor de link */
+    text-decoration: none; /* Verwijder de onderstreping van de link */
+    font-size: 1.5rem; /* Grotere lettergrootte voor de tekst */
+    font-weight: bold; /* Vetgedrukte tekst */
+    transition: color 0.3s ease; /* Vloeiende overgangen voor kleurverandering bij hover */
+}
+
+/* Hover effect voor de student-opinions link */
+.student-opinions:hover {
+    color: #a8a8a8; /* Lichtere kleur bij hover */
+}
+
+/* Zorg ervoor dat de inhoud niet onder de header valt */
+.container-header{
+    background-color: #70c6ff;
+}
+
+
+/* Algemene stijlen voor de inhoudssecties */
+.intro, .contact {
+    background-color: rgb(232, 232, 232); /* Aangepast naar kleur uit de eerste CSS */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Zorg voor ruimte onder elk blok */
+}
+
+.intro {
+    margin-top: 20px; /* Voeg ruimte boven de intro-sectie toe */
+}
+
+.contact {
+    margin-bottom: 20px; /* Houd ruimte onder de contact-sectie */
+}
+
+.student-reviews {
+    margin-bottom: 20px;
+}
+
+.review-block {
+    margin-bottom: 15px;
+}
+
+.review-title {
+    background-color: #70c6ff; /* Aangepast naar kleur uit de eerste CSS */
+    color: white; /* Witte tekstkleur */
+    padding: 15px; /* Padding rondom de tekst */
+    border-radius: 8px; /* Afronding van de hoeken */
+    cursor: pointer; /* Verander cursor naar pointer */
+    font-size: 1.2rem; /* Grotere lettergrootte */
+    font-weight: bold; /* Vetgedrukte tekst */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor een 3D-effect */
+    transition: background-color 0.3s ease; /* Vloeiende overgangen voor achtergrondkleur bij hover */
+}
+
+/* Hover effect voor de review-titels */
+.review-title:hover {
+    background-color: #56a9e6; /* Aangepast naar kleur uit de eerste CSS */
+}
+
+.review-content {
+    display: none; /* Verberg de inhoud standaard */
+    background-color: #ffffff; /* Witte achtergrondkleur */
+    padding: 15px; /* Padding rondom de tekst */
+    border-radius: 8px; /* Afronding van de hoeken */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lichte schaduw voor een 3D-effect */
+    margin-top: 10px; /* Ruimte boven de inhoud */
+}
+
+/* Stijlen voor de footer */
+.page-footer {
+    background-color: #2b0088; /* Donkerpaarse achtergrondkleur */
+    color: white; /* Witte tekstkleur */
+    text-align: center;
+    padding: 10px 0; /* Padding boven en onder */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Schaduw boven de footer */
+    z-index: 1000; /* Zorgt ervoor dat de footer altijd boven andere elementen blijft */
+}
+
+/* Container binnen de footer voor centreren */
+.footer .container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px; /* Zorgt ervoor dat de inhoud niet te breed is */
+    padding: 0 20px;
+}
+
+/* Stijlen voor de footer blokken */
+.footer-block {
+    flex: 1;
+    text-align: center;
+   
+}
+
+
+/* Footer links */
+.footer-link {
+    color: #70c6ff; /* Kleur van de links */
+    text-decoration: none; /* Verwijdert onderstreping van links */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #56a9e6; /* Donkerdere tint bij hover */
+}
+
+/* Footer kopjes */
+.footer-block h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Responsive aanpassingen */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .content .block {
+        width: 80%; /* Breder op mobiel */
+    }
+}

@@ -1,0 +1,408 @@
+/* Zorg ervoor dat body en html geen extra ruimte hebben */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+   
+    min-height: 300vh;
+}
+
+/* De video achtergrond instellen */
+.video-background {
+    position: fixed; /* Gebruik fixed zodat de video altijd op de achtergrond blijft */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Zet de video achter de overige content */
+}
+
+/* Zorg ervoor dat de video de volledige achtergrond bedekt */
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Zorg ervoor dat de video het gehele scherm bedekt */
+}
+
+/* Zorg ervoor dat de container boven de video wordt weergegeven */
+.container {
+    position: relative;
+    z-index: 1; /* Zet de container voor de video */
+    padding: 70px; /* Optioneel: voeg padding toe indien nodig */
+}
+
+
+.docenten-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolommen */
+    gap: 20px; /* Ruimte tussen de docenten */
+    padding: 20px;
+    justify-items: center;
+}
+
+.docent {
+    text-align: center; /* Centreer de naam onder de afbeelding */
+}
+
+.docent img {
+    width: 150px; /* Maak de afbeeldingen 150px breed */
+    height: 150px; /* Houd de afbeeldingen vierkant */
+    border-radius: 50%; /* Maak de afbeeldingen rond */
+    object-fit: cover; /* Zorg dat de afbeeldingen goed passen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lichte schaduw om de afbeelding */
+}
+
+.docent p {
+    margin-top: 10px; /* Ruimte tussen de afbeelding en de naam */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Container voor layout */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+    padding: 0 10px; /* Voeg padding toe aan de zijkanten van de container */
+    padding-top: 150px; /* Zorg ervoor dat de inhoud niet onder de header valt */
+    padding-bottom: 60px; /* Zorg ervoor dat de inhoud niet onder de footer valt */
+    position: relative; /* Zorg ervoor dat de container zich correct positioneert */
+}
+h1 {
+    color: #f5f5f5;
+}
+/* Stijl voor h2 in de header */
+.header h2 {
+    position: relative; /* Nodig voor absolute positionering van pseudo-element */
+    color: #FFFFFF; /* Basis tekstkleur */
+    font-size: 24px; /* Basis lettergrootte */
+    font-weight: bold; /* Vetgedrukt voor meer nadruk */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Schaduw voor extra diepte */
+    transition: all 0.3s ease; /* Vloeiende overgang voor alle veranderingen */
+    margin-right: 30px;
+}
+
+/* Pseudo-element voor wolkeffect */
+.header h2::after {
+    content: ""; /* Vereist voor pseudo-element */
+    position: absolute; /* Absolute positionering ten opzichte van de ouder */
+    top: 50%; /* Positioneer het midden van het element */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centreer het pseudo-element */
+    width: 120%; /* Maak de wolk iets groter dan de tekst */
+    height: 120%;
+    background: rgba(255, 255, 255, 0.6); /* Lichte, semi-doorzichtige achtergrondkleur */
+    border-radius: 50%; /* Maak de wolk rond */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Schaduw voor wolkeffect */
+    filter: blur(10px); /* Voeg een blur toe voor een zachter effect */
+    opacity: 0; /* Begin met verborgen wolk */
+    transition: all 0.3s ease; /* Vloeiende overgang voor het tonen van de wolk */
+    z-index: -1; /* Zorg ervoor dat de wolk achter de tekst zit */
+}
+
+/* Hover-effect voor h2 in de header */
+.header h2:hover {
+    color: darkblue; /* Verander tekstkleur bij hover */
+    font-size: 30px; /* Vergroot lettergrootte bij hover */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Versterk schaduw bij hover */
+}
+
+/* Toon de wolk bij hover */
+.header h2:hover::after {
+    opacity: 1; /* Maak de wolk zichtbaar bij hover */
+}
+
+
+/* Header stijlen */
+.header {
+    grid-column: 1 / 4;
+    background-color: #70c6ff; /* Achtergrondkleur van de header */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Stijl voor de afbeelding in de header */
+.header-logo {
+    max-height: 50px;
+    max-width: 150px;
+    object-fit: contain;
+}
+.head-logo{
+    max-height: 600px;
+    max-width: 600px;
+    object-fit: contain;
+}
+
+.block{
+    transition: all 0.3s ease;
+    text-decoration: none;
+    
+    height: auto; /* Zorg ervoor dat de hoogte automatisch aangepast wordt aan de inhoud */
+    
+    
+}
+.block a{
+    text-decoration: none;
+    color: #f5f5f5;
+}
+/* Link naar de menu in sidebar */
+/* Algemene stijlen voor knoppen in de zijbalken */
+.sidebar-left .block,
+.sidebar-right .block {
+    transition: all 0.3s ease; /* Vloeiende overgang voor alle veranderingen */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #2b0088; /* Achtergrondkleur van knoppen */
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw voor diepte */
+    position: relative; /* Nodig voor positionering van pseudo-elementen */
+    text-decoration: none;
+}
+
+/* Hover-effect voor knoppen */
+.sidebar-left .block:hover,
+.sidebar-right .block:hover {
+    background-color: #1a006e; /* Donkerdere achtergrondkleur bij hover */
+    color: white; /* Verander tekstkleur bij hover */
+    transform: scale(1.05); /* Vergroot de knop bij hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Versterk de schaduw bij hover */
+    text-decoration: none;
+}
+
+/* Toevoegen van een pseudo-element voor extra effect */
+.sidebar-left .block::after,
+.sidebar-right .block::after {
+    content: ""; /* Vereist voor pseudo-element */
+    position: absolute; /* Absolute positionering ten opzichte van de knop */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centreer het pseudo-element */
+    width: 120%; /* Maak het pseudo-element iets groter dan de knop */
+    height: 120%;
+    background: rgba(255, 255, 255, 0.2); /* Lichte, semi-doorzichtige achtergrondkleur */
+    border-radius: 50%; /* Maak het pseudo-element rond */
+    filter: blur(10px); /* Voeg een blur toe voor een zachter effect */
+    opacity: 0; /* Begin met verborgen pseudo-element */
+    transition: all 0.3s ease; /* Vloeiende overgang voor het tonen van het pseudo-element */
+    z-index: -1; /* Zorg ervoor dat het pseudo-element achter de knop zit */
+    text-decoration: none;
+}
+
+/* Toon het pseudo-element bij hover */
+.sidebar-left .block:hover::after,
+.sidebar-right .block:hover::after {
+    opacity: 1; /* Maak het pseudo-element zichtbaar bij hover */
+    text-decoration: none;
+}
+
+#extra-button {
+    margin-top: 10px;
+    background-color: #2b0088; /* Kleur van de button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.vak-info {
+    display: none; /* Verberg de vakinformatie standaard */
+    margin-top: 20px; /* Ruimte boven de extra informatie */
+    padding: 15px; /* Padding aan alle kanten voor meer ruimte binnen het blok */
+    background-color: #f9f9f9; /* Optioneel: achtergrondkleur om het leesbaar te maken */
+    border-radius: 5px; /* Optioneel: afgeronde hoeken */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optioneel: een lichte schaduw voor een mooi effect */
+    max-height: none;
+    padding-bottom: 500px;
+    
+        max-height: 200px;  /* Stel een maximum hoogte in (bijvoorbeeld 400px) */
+        overflow: auto;     /* Voeg scroll toe als de inhoud langer is dan de hoogte */
+    
+    
+}
+
+.vak-info.visible {
+    display: block; /* Toon de vakinformatie wanneer zichtbaar */
+}
+
+
+
+
+.content {
+    grid-column: 2 / 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    position: relative; /* Zorg ervoor dat het positioneren relatief is */
+    padding-top: 40px;
+    
+    transition: all 0.3s ease;
+}
+
+/* Blokken in de inhoud */
+.content .block {
+    position: relative;
+    padding: 20px;
+    width: 60%;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    
+    background-color: #ffffff; /* Achtergrondkleur van blokken */
+    color: black;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative; /* Zorg ervoor dat het positioneren relatief is */
+    transition: all 0.3s ease;
+    
+}
+
+/* Verborgen inhoud stijlen */
+.hidden-content {
+    display: none;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: max-height 0.5s ease-out;
+    overflow: visible;
+    max-height: none;
+}
+
+/* Wanneer een blok is uitgebreid */
+.block.expanded + .hidden-content {
+    display: block;
+    max-height: 500px; /* Meer ruimte voor uitgebreide inhoud */
+    padding-bottom: 20px; /* Ruimte onderin de verborgen inhoud */
+}
+
+/* Stijlen voor de rechter zijbalk */
+
+
+
+
+/* Footer stijlen */
+.footer {
+    clear: both;
+    position: relative;
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #2b0088; /* Achtergrondkleur van de footer */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Links in de footer */
+.footer .block a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Blokken in de footer */
+.footer .block {
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+    background-color: #2b0088; /* Achtergrondkleur van blokken */
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Verborgen inhoud stijlen */
+.hidden-content {
+    display: none;
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+/* Wanneer een blok is uitgebreid */
+.block.expanded + .hidden-content {
+    display: block;
+    max-height: 500px; /* Meer ruimte voor uitgebreide inhoud */
+}
+
+.block.expanded {
+    padding-bottom: 40px;
+}
+#smoelenboek-docent.hidden-content.expanded{
+    padding-bottom: 300px;
+}
+#smoelenboek-docent p {
+    margin: 20px 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+#smoelenboek-docent h3 {
+    font-size: 20px;
+    color: #2b0088; /* Pas de kleur aan indien nodig */
+    margin-bottom: 10px;
+}
+
+#smoelenboek-docent .docent-detail {
+    margin-bottom: 30px;
+}
+/* Responsive aanpassingen */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sidebar-left, .sidebar-right {
+        grid-column: 1 / 2;
+    }
+
+    .content {
+        grid-column: 1 / 2;
+    }
+
+    .footer {
+        flex-direction: column;
+        grid-column: 1 / 2;
+    }
+
+    .content .block {
+        width: 80%; /* Breder op mobiel */
+    }
+
+    .sidebar-right .pink {
+        position: static; /* Verwijder positie instelling voor mobiel */
+    }
+}

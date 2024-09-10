@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mening van Studenten - Software Developer</title>
+    <link rel="stylesheet" href="../css/meningstyle.css"> <!-- Zorg ervoor dat dit bestand je CSS bevat -->
+</head>
+<body>
+    
+    <header>
+        <div class="container-header">
+            <div class="header">
+                <a href="index.html" class="button">Home</a>
+                <h1>Mening Studenten</h1>
+                <img src="../main/img/Curio-logo-3.webp" alt="Logo" class="header-logo">
+            </div>
+        </div>
+    </header>
+<div class="video-background">
+        <video autoplay muted loop>
+            <source src="../main/img/85590-590014592.mp4" type="video/mp4">
+            Je browser ondersteunt deze video niet.
+        </video>
+</div>
+    <div class="container">
+        <section class="intro">
+            <h2>Waarom deze Opleiding?</h2>
+            <p>De opleiding Software Developer biedt een uitgebreid programma dat studenten voorbereidt op een carrière in de software-industrie. Deze sectie onderzoekt wat huidige studenten van deze opleiding vinden en hoe het hen heeft geholpen in hun loopbaan.</p>
+        </section>
+        
+        <section class="student-reviews">
+            <h2>Ervaringen van Studenten</h2>
+            <div class="review-block">
+                <div class="review-title" onclick="toggleReview('jan')">Jan de Vries</div>
+                <div id="jan" class="review-content">
+                    <p>"De opleiding heeft me een solide basis gegeven in zowel theorie als praktijk. De hands-on projecten waren bijzonder waardevol en hebben me geholpen om echte vaardigheden te ontwikkelen die ik nu dagelijks gebruik in mijn werk."</p>
+                </div>
+            </div>
+            <div class="review-block">
+                <div class="review-title" onclick="toggleReview('marie')">Marie Jansen</div>
+                <div id="marie" class="review-content">
+                    <p>"De docenten zijn zeer deskundig en altijd bereid om te helpen. De opleiding is uitdagend, maar biedt veel ondersteuning en middelen om te slagen."</p>
+                </div>
+            </div>
+            <div class="review-block">
+                <div class="review-title" onclick="toggleReview('tom')">Tom Bakker</div>
+                <div id="tom" class="review-content">
+                    <p>"De samenwerking met medestudenten en de mogelijkheid om aan real-world projecten te werken, heeft mijn ervaring enorm verrijkt. Ik voel me goed voorbereid op mijn carrière als software developer."</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact">
+            <h2>Contact en Meer Informatie</h2>
+            <p>Heb je vragen over de opleiding of wil je meer weten over de ervaringen van studenten? Neem contact met ons op via <a href="mailto:curio@edu.curio.nl">curio@edu.curio.nl</a> of bezoek onze website voor meer details.</p>
+        </section>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container-footer">
+            <div class="footer-block">
+                <h3>Mening studenten</h3>
+                <a href="contact&hulp.html" class="footer-link">Contact & Hulp</a>
+                <p><a href="socials.html" class="footer-link">Socials</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="review-toggle.js"></script> <!-- Zorg ervoor dat dit bestand je JavaScript bevat -->
+</body>
+</html>
